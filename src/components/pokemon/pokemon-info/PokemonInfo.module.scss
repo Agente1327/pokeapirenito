@@ -1,0 +1,49 @@
+.pokemon-info {
+  width: 100%;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con transparencia */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidad */
+  backdrop-filter: blur(5px); /* Desenfoque del fondo para dar un efecto de "vidrio esmerilado" */
+  transition: all 0.3s ease; /* Transición suave para interacciones */
+  
+  &:hover {
+    transform: scale(1.03); /* Efecto de escala al pasar el ratón */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Aumento de sombra en hover */
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #072ac8; /* Color brillante para el título */
+    margin-bottom: 24px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para el título */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Convertir texto en mayúsculas para un estilo futurista */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave para los efectos */
+  }
+
+  &__title:hover {
+    color: #00d1ff; /* Cambiar color del título al pasar el ratón */
+    text-shadow: 2px 2px 15px rgba(0, 209, 255, 0.7); /* Sombra de texto con más intensidad */
+  }
+
+  &__content {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #e1e1e1; /* Color claro para el contenido */
+    line-height: 1.6;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo blanco semi-transparente */
+    border-radius: 8px;
+    backdrop-filter: blur(5px); /* Efecto de desenfoque para el contenido */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil para el contenido */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  &__content:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más oscuro al pasar el ratón */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* Aumento de sombra en hover */
+  }
+}

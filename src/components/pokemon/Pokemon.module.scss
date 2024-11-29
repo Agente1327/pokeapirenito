@@ -1,0 +1,117 @@
+.pokemon {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: auto;
+  padding: 42px;
+  background: linear-gradient(135deg, rgba(0, 204, 255, 0.2), rgba(255, 0, 204, 0.2)); /* Fondo de gradiente moderno */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+  overflow: hidden;
+  transition: all 0.3s ease; /* Transición suave para interacciones */
+  
+  @media (min-width: 768px) {
+    padding: 24px 64px;
+  }
+
+  &:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Aumenta la sombra en hover */
+  }
+
+  &__number {
+    color: #6e7378;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  &__name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #072ac8;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil en el texto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Hacer que el nombre esté en mayúsculas */
+  }
+
+  &__wrapper-info {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 24px;
+    flex-direction: column-reverse;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    backdrop-filter: blur(5px); /* Desenfoque del fondo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__wrapper-img {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px; /* Bordes redondeados para la imagen */
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 300px;
+      max-height: 300px;
+      text-align: center;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      width: 56%;
+    }
+
+    &:hover img {
+      transform: rotate(15deg); /* Rotación en hover para la imagen */
+    }
+  }
+
+  &__wrapper-details {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 24px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2); /* Fondo oscuro semi-transparente */
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+
+    & > :last-child {
+      grid-column-end: auto;
+    }
+
+    @media (min-width: 600px) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      & > :last-child {
+        grid-column-end: span 2;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      & > :last-child {
+        grid-column-end: initial;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,103 @@
+.combat-list {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 24px 42px;
+  z-index: 99;
+  background-color: #1e1e1e; /* Fondo oscuro para un toque futurista */
+  transition: right 0.5s ease-in, background-color 0.3s ease; /* Transición suave para el fondo y la animación lateral */
+  position: fixed;
+  top: 0;
+  right: -100%;
+  box-shadow: -2px 0px 20px rgba(0, 255, 255, 0.5), -2px 0px 20px rgba(0, 0, 255, 0.3); /* Sombra luminosa */
+  border-radius: 15px 0 0 15px; /* Bordes redondeados en el lado izquierdo */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+  overflow: hidden;
+
+  &--is-open {
+    transition: right 0.3s ease-out;
+    right: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 456px;
+    border-radius: 15px; /* Redondeamos más en pantallas grandes */
+
+    &--is-open {
+      right: 0;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: 0;
+    width: 500px; /* Aumento del ancho en pantallas más grandes */
+  }
+
+  &__title {
+    color: #00ffff; /* Texto en color cian neón */
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-wrap: balance;
+    margin-bottom: 42px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.8); /* Sombra de texto luminosa */
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: #00bfff; /* Cambio de color al pasar el ratón */
+      text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 1); /* Efecto de resplandor al pasar el ratón */
+    }
+  }
+
+  &__empty {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__wrapper-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: rotate(90deg);
+      color: #00ffff; /* Efecto de cambio de color y rotación */
+    }
+
+    i {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    @media (min-width: 1024px) {
+      display: none; /* Ocultamos el ícono en pantallas más grandes */
+    }
+  }
+
+  &__wrapper-fighters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 24px;
+
+    overflow-y: auto;
+    scrollbar-color: #00bfff #1e1e1e; /* Color de la barra de desplazamiento */
+    scrollbar-width: thin;
+    height: calc(100% - 120px);
+    padding: 10px 10px 20px 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3); /* Fondo ligeramente transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo para mayor profundidad */
+  }
+
+  /* Efectos adicionales cuando la lista de combate se abre */
+  &--is-open {
+    box-shadow: -2px 0px 30px rgba(0, 255, 255, 0.8), -2px 0px 30px rgba(0, 0, 255, 0.5); /* Sombra más intensa cuando está abierto */
+  }
+}

@@ -1,0 +1,51 @@
+.action-bar {
+  width: 100%;
+  max-width: 1366px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 20px 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(45deg, #1a1a1a, #333333); /* Fondo con degradado oscuro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3), 0 2px 10px rgba(0, 0, 255, 0.2); /* Sombras sutiles y brillantes */
+
+  transition: all 0.3s ease; /* Transiciones suaves para interactividad */
+}
+
+.action-bar:hover {
+  background: linear-gradient(45deg, #00bfff, #00ffff); /* Efecto de cambio de color en hover */
+  box-shadow: 0 8px 30px rgba(0, 255, 255, 0.5), 0 4px 15px rgba(0, 0, 255, 0.4); /* Resplandor más intenso */
+}
+
+.action-bar .action-bar-item {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transición suave de color y transformaciones */
+}
+
+.action-bar .action-bar-item:hover {
+  color: #00bfff; /* Cambia el color del texto al pasar el ratón */
+  transform: scale(1.1); /* Efecto de agrandado al pasar el ratón */
+}
+
+.action-bar .action-bar-item:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #00bfff; /* Línea de subrayado futurista */
+  transition: width 0.3s ease; /* Efecto de animación para el subrayado */
+}
+
+.action-bar .action-bar-item:hover:before {
+  width: 100%; /* El subrayado se extiende al pasar el ratón */
+}

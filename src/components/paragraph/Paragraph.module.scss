@@ -1,0 +1,34 @@
+.paragraph {
+  font-size: 1.3rem; /* Aumento en tamaño para darle mayor presencia */
+  line-height: 1.6;
+  color: #e0e0e0; /* Color de texto más claro para dar sensación de modernidad */
+  font-weight: 500;
+  padding: 64px;
+  background: linear-gradient(45deg, rgba(1, 1, 1, 0.5), rgba(34, 34, 34, 0.8)); /* Fondo sutil oscuro con un gradiente */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra difusa para profundidad */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra de texto para darle más énfasis */
+  letter-spacing: 0.5px; /* Espaciado de letras para hacerlo más estilizado */
+  max-width: 80%; /* Limitar el ancho para que el texto no se vea demasiado extendido */
+  margin: 20px auto; /* Centrado con márgenes adecuados */
+  font-family: "Roboto", sans-serif; /* Fuente moderna */
+  transition: all 0.3s ease; /* Transición para efectos interactivos */
+}
+
+.paragraph:hover {
+  transform: translateY(-5px); /* Desplazamiento hacia arriba al hacer hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Efecto de sombra más pronunciado */
+  background: linear-gradient(45deg, rgba(1, 1, 1, 0.8), rgba(50, 50, 50, 0.9)); /* Fondo más oscuro al hacer hover */
+}
+
+.paragraph::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 204, 255, 0.3), rgba(255, 0, 204, 0.3));
+  opacity: 0.1;
+  pointer-events: none;
+}

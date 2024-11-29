@@ -1,0 +1,81 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 10px; /* Bordes más redondeados */
+  border-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600; /* Un poco más de peso para hacerlo más llamativo */
+  height: 45px; /* Botón un poco más alto */
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 12px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; /* Transición para todo */
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  background: linear-gradient(145deg, #2c3e50, #4ca1af); /* Fondo con gradiente futurista */
+}
+
+.button:hover {
+  transform: translateY(-3px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}
+
+.button:active {
+  transform: translateY(1px); /* Efecto de "presionar" el botón */
+}
+
+.button--default {
+  background: linear-gradient(145deg, #212529, #333333); /* Gradiente más oscuro para el botón por defecto */
+  color: #ffffff;
+  &:hover {
+    background: linear-gradient(145deg, #6e7379, #4c5053); /* Efecto de hover con gradiente más claro */
+  }
+}
+
+.button--add-item {
+  background: linear-gradient(145deg, #072ac8, #1e3cb2); /* Gradiente azul futurista */
+  &:hover {
+    background: linear-gradient(145deg, #7d8fe0, #4f6fb2); /* Hover con un gradiente más suave */
+  }
+}
+
+.button--remove-item {
+  background: linear-gradient(145deg, #ef271b, #e03e28); /* Gradiente rojo brillante */
+  &:hover {
+    background: linear-gradient(145deg, #e97c75, #d74f47); /* Hover con un tono más claro */
+  }
+}
+
+/* Efecto de texto en el botón */
+.button span {
+  position: relative;
+  z-index: 1;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2); /* Resplandor blanco sutil */
+  border-radius: 10px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover::after {
+  opacity: 0; /* Efecto de desaparecer el resplandor al pasar el ratón */
+}

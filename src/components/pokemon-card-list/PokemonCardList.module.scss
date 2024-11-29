@@ -1,0 +1,27 @@
+.pokemon-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Establece un diseño de columna flexible */
+  gap: 36px 42px; /* Espaciado entre elementos */
+  width: 100%;
+  padding: 64px 42px; /* Padding superior e inferior de 64px, y los laterales de 42px */
+  
+  /* Estilos para pantallas más pequeñas (por debajo de 768px) */
+  @media screen and (max-width: 767px) {
+    padding: 32px 20px; /* Padding reducido en pantallas pequeñas */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Columnas más pequeñas en dispositivos móviles */
+  }
+
+  /* Estilos para pantallas medianas (más de 768px) */
+  @media screen and (min-width: 768px) {
+    padding: 4rem; /* Padding más amplio para pantallas medianas */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Mantener columnas con un tamaño mínimo de 150px */
+  }
+
+  /* Estilos para pantallas grandes (más de 1024px) */
+  @media screen and (min-width: 1024px) {
+    max-width: 1366px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centrado en la página */
+    padding: 4rem 60px; /* Padding adicional para pantallas grandes */
+  }
+}

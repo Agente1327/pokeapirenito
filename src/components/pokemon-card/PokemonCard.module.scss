@@ -1,0 +1,91 @@
+.pokemon-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #0f0f0f, #1c1c1c); /* Fondo más oscuro con gradiente de negro */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.4); /* Efecto de resplandor intenso */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, filter 0.3s ease; /* Transición para suavizar interacciones */
+  
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    box-shadow: 0 0 60px rgba(0, 255, 255, 1), 0 0 80px rgba(0, 255, 255, 0.6); /* Resplandor fuerte y sombras extendidas */
+    background: linear-gradient(45deg, #072ac8, #0a0a0a); /* Fondo azul y negro en hover */
+    filter: brightness(1.1); /* Aumenta el brillo al pasar el ratón */
+  }
+
+  &__image {
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222222;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7); /* Sombra futurista más intensa */
+    transition: all 0.3s ease;
+    
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      border-radius: 50%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 60px rgba(0, 255, 255, 1); /* Efecto de sombra más intensa */
+    }
+  }
+
+  &__name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #00ffff; /* Texto neón cian */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.6); /* Sombra de texto neón brillante */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    
+    &:hover {
+      color: #00bfff; /* Cambio a color neón más frío */
+      text-shadow: 0 0 20px rgba(0, 255, 255, 1), 0 0 30px rgba(0, 255, 255, 0.9); /* Sombra más fuerte */
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 2;
+
+    i {
+      font-size: 1.5rem;
+      color: #00ffff; /* Color de íconos en neón */
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      transform: rotate(90deg);
+      color: #00bfff; /* Cambio de color al pasar el ratón */
+    }
+  }
+
+  &__color-remove {
+    color: #ff4040; /* Rojo intenso para eliminar */
+  }
+
+  &__color-add {
+    color: #00ffff; /* Azul neón para añadir */
+  }
+}
